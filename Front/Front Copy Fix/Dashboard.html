@@ -5,7 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="moodle, Dashboard" />
 <link rel="stylesheet" type="text/css" href="https://mmp.unej.ac.id/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://mmp.unej.ac.id/theme/styles.php/essential/1586573671_1585440894/all" />
-<script type="text/javascript">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.css"/>
+    <script type="text/javascript">
 //<![CDATA[
 var M = {}; M.yui = {};
 M.pageloadstarttime = new Date();
@@ -25,8 +26,390 @@ M.yui.loader = {modules: {}};
 <link rel="apple-touch-icon" sizes="57x57" href="https://mmp.unej.ac.id/theme/image.php/essential/theme/1586573671/homeicon/iphone"/>
 <link rel="apple-touch-icon" sizes="72x72" href="https://mmp.unej.ac.id/theme/image.php/essential/theme/1586573671/homeicon/ipad"/>
 <link rel="apple-touch-icon" sizes="114x114" href="https://mmp.unej.ac.id/theme/image.php/essential/theme/1586573671/homeicon/iphone_retina"/>
-<link rel="apple-touch-icon" sizes="144x144" href="https://mmp.unej.ac.id/theme/image.php/essential/theme/1586573671/homeicon/ipad_retina"/></head>
+<link rel="apple-touch-icon" sizes="144x144" href="https://mmp.unej.ac.id/theme/image.php/essential/theme/1586573671/homeicon/ipad_retina"/>
+<style>
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+html, body{
+  width:100%;
+  height:100%;
+  margin:0;
+  font: bold 17px 'FontAwesome', sans-serif;
+}
 
+.page-wrapper{
+  width:100%;
+  height:100%;
+ background:url(https://i.imgur.com/2ZgHKbQ.jpg) center no-repeat;
+  background-size:cover;
+}
+
+.blur{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+a.btn{
+  width:150px;
+  display:block;
+  margin:-25px 0 0 -75px;
+  padding:1em 0;
+  position:absolute;
+  top:50%; left:50%;
+  font:1.125em 'Arial', sans-serif;
+  font-weight:700;
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  border-radius:5px;
+  background:rgba(217,67,86,1);
+}
+
+.modal-wrapper{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0; left:0;
+  background:rgba(255,257,153,0.75);
+  visibility:hidden;
+  opacity:0;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.modal-wrapper.open{
+  opacity:1;
+  visibility:visible;
+}
+
+.modal{
+  width:60rem;
+  height:auto;
+  display:block;
+  margin:50% 0 0 -470px;
+  position:relative;
+  top:50%; left:50%;
+  background:#fff;
+  opacity:0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.modal-wrapper.open .modal{
+  margin-top:-200px;
+  opacity:1;
+}
+
+.head{
+  width:90%;
+  height:32px;
+  padding:1.5em 5%;
+  overflow:hidden;
+  background:#01bce5;
+}
+
+.btn-close{
+  width:32px;
+  height:32px;
+  display:block;
+  float:right;
+}
+
+.btn-close::before, .btn-close::after{
+  content:'';
+  width:32px;
+  height:6px;
+  display:block;
+  background:#fff;
+}
+
+.btn-close::before{
+  margin-top:12px;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+
+.btn-close::after{
+  margin-top:-6px;
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+
+.content{
+  padding: 0 10px 5% 10px;
+}
+
+div.content{
+  background:#fff;
+}
+
+ul > li:before {
+/* content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="yellow" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); */
+    content: "\f005";
+    color: #f1c40f;
+    display: block;
+    font-size: 30px;
+    float: left;
+    margin: -7px 20px 0 0;
+}
+table{
+  width: 100%;
+}
+
+table>thead{
+color:#fff;
+}
+
+ul > li {
+    padding-top: 5px;
+    list-style-type: none;
+}
+
+a.button{
+  text-decoration: none;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #01bce5;
+  padding: 7px 20px;
+  color:#01bce5;
+  font-weight: normal;
+}
+
+a.button:hover{
+  background: #01bce5;
+  border: 1px solid #01bce5;
+  color: #fff;
+}
+
+span.point{
+  border-radius: 50%;
+  color: #fff;
+  background: #01bce5;
+  padding: 10px;
+}
+
+.flash {
+  display: block;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 350px;
+  padding: 20px 25px 20px 120px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #66847C;
+  background-color: #FFF;
+  border: 2px solid #01bce5;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.0182);
+  opacity: 0;
+  z-index: 999;
+}
+
+.flash__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1.5em;
+  height: 100%;
+  padding: 0 0.4em 0 1em;
+  background-color: #01bce5;
+  color: #FFF;
+  font-size: 36px;
+  font-weight: 300;
+  transform: translate(0, -50%);
+}
+.flash__icon .icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+
+@-webkit-keyframes drop-in-fade-out {
+  0% {
+    opacity: 0;
+    visibility: visible;
+    -webkit-transform: translate3d(0, -200%, 0);
+    -moz-transform: translate3d(0, -200%, 0);
+    -ms-transform: translate3d(0, -200%, 0);
+    -o-transform: translate3d(0, -200%, 0);
+    transform: translate3d(0, -200%, 0);
+  }
+  12% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(75%, 0, 0);
+    -moz-transform: translate3d(75%, 0, 0);
+    -ms-transform: translate3d(75%, 0, 0);
+    -o-transform: translate3d(75%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+  }
+}
+@-moz-keyframes drop-in-fade-out {
+  0% {
+    opacity: 0;
+    visibility: visible;
+    -webkit-transform: translate3d(0, -200%, 0);
+    -moz-transform: translate3d(0, -200%, 0);
+    -ms-transform: translate3d(0, -200%, 0);
+    -o-transform: translate3d(0, -200%, 0);
+    transform: translate3d(0, -200%, 0);
+  }
+  12% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(75%, 0, 0);
+    -moz-transform: translate3d(75%, 0, 0);
+    -ms-transform: translate3d(75%, 0, 0);
+    -o-transform: translate3d(75%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+  }
+}
+@-o-keyframes drop-in-fade-out {
+  0% {
+    opacity: 0;
+    visibility: visible;
+    -webkit-transform: translate3d(0, -200%, 0);
+    -moz-transform: translate3d(0, -200%, 0);
+    -ms-transform: translate3d(0, -200%, 0);
+    -o-transform: translate3d(0, -200%, 0);
+    transform: translate3d(0, -200%, 0);
+  }
+  12% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(75%, 0, 0);
+    -moz-transform: translate3d(75%, 0, 0);
+    -ms-transform: translate3d(75%, 0, 0);
+    -o-transform: translate3d(75%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+  }
+}
+@keyframes drop-in-fade-out {
+  0% {
+    opacity: 0;
+    visibility: visible;
+    -webkit-transform: translate3d(0, -200%, 0);
+    -moz-transform: translate3d(0, -200%, 0);
+    -ms-transform: translate3d(0, -200%, 0);
+    -o-transform: translate3d(0, -200%, 0);
+    transform: translate3d(0, -200%, 0);
+  }
+  12% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(75%, 0, 0);
+    -moz-transform: translate3d(75%, 0, 0);
+    -ms-transform: translate3d(75%, 0, 0);
+    -o-transform: translate3d(75%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+  }
+}
+.animate--drop-in-fade-out {
+  -webkit-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+  -moz-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+  -ms-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+  -o-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+  animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+}    
+</style>
+</head>
+    
 <body  id="page-my-index" class="format-site  path-my chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam mmp-unej-ac-id pagelayout-mydashboard course-1 context-470993 loggedin desktopdevice pagewidthvariable custommenuitems categoryicons floatingsubmit has-region-content used-region-content has-region-side-pre used-region-side-pre has-region-footer-left empty-region-footer-left has-region-footer-middle empty-region-footer-middle has-region-footer-right empty-region-footer-right has-region-header empty-region-header has-region-page-top empty-region-page-top has-region-side-post used-region-side-post">
 
 <div class="skiplinks">
@@ -129,6 +512,51 @@ document.body.className += ' jsenabled';
     </nav>
 </header>
 
+<div class="flash">
+  <div class="flash__icon">
+    <i class="icon fa fa-check-circle-o"></i>
+  </div>
+  <p class="flash__body">
+    Claim successfully!
+  </p>
+</div>
+<div class="page-wrapper">
+  <a class="btn trigger" href="javascript:;">Click Me!</a>
+</div>
+<div class="modal-wrapper">
+  <div class="modal">
+    <div class="head">
+      <a class="btn-close trigger" href="javascript:;"></a>
+    </div>
+    <div class="content">
+      <table>
+        <thead>
+          <td width="75%">Tugas</td>
+          <td width="15%">Action</td>
+          <td width="10%">Poin</td>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+            <ul><li>Tugas Membuat Game Menggunakan AI Greedy</li></ul>
+            </td>
+            <td><a href="javascript:;" id="claim" class="button">Claim</a></td>
+            <td><span class="point">20</span></td>
+          </tr>
+           <tr>
+            <td>
+            <ul><li>Tugas Membuat Respon REST API Menggunakan Laravel & ReactJS</li></ul>
+            </td>
+            <td><a href="javascript:;" class="button">Claim</a></td>
+            <td><span class="point">20</span></td>
+          </tr>
+        </tbody>
+  
+      </table>
+    </div>
+  </div>
+</div>
+    
 <div id="page" class="container-fluid">
     <div id="page-top-header" class="clearfix"><div id="page-navbar" class="clearfix row-fluid"><div class="breadcrumb-nav span9"><span class="accesshide" id="navbar-label">Page path</span><nav aria-labelledby="navbar-label"><ul class="breadcrumb style1"><li class="last first"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" aria-current="page" href="https://e-learning.unej.ac.id/my/"><span itemprop="title">Dashboard</span></a></span></li></ul></nav></div><nav class="breadcrumb-button span3"><div class="singlebutton"><form method="post" action="https://e-learning.unej.ac.id/my/index.php"><div><input type="submit" value="Customise this page"><input type="hidden" name="edit" value="1"><input type="hidden" name="sesskey" value="C0tCeKG0dp"></div></form></div></nav></div></div><aside id="block-region-header" class="row-fluid block-region rowblock-blocks" data-blockregion="header" data-droptarget="1"></aside>    <!-- Start Main Regions -->
     <div id="page-content" class="row-fluid">
@@ -2313,6 +2741,8 @@ document.body.className += ' jsenabled';
     </footer>
     <a href="https://e-learning.unej.ac.id/my/#top" class="back-to-top" aria-label="Back to top">
         <span aria-hidden="true" class="fa fa-angle-up "></span></a>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 var require = {
@@ -2705,5 +3135,24 @@ M.util.init_block_hider(Y, {"id":"inst506017","title":"Recently accessed courses
 //]]>
 </script>
 
+<script>
+    $( document ).ready(function() {
+     $('.modal-wrapper').toggleClass('open');
+     $('.page-wrapper').toggleClass('blur');
+  $('.trigger').click(function() {
+  $('.modal-wrapper').toggleClass('open');
+     $('.page-wrapper').toggleClass('blur');
+  return false;
+  });
+});
+
+  $( "#claim").click(function() {
+    console.log('anjay')
+  $( ".flash" ).addClass( "animate--drop-in-fade-out" );
+  setTimeout(function(){
+    $( ".flash" ).removeClass( "animate--drop-in-fade-out" );
+  }, 4000);
+});
+</script>
 
 <!-- Essential theme version: 2018121704 is developed by Gareth J Barnard: about.me/gjbarnard --><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>
