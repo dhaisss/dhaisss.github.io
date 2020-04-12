@@ -1,0 +1,2216 @@
+
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" xml:lang="en" class="no-js">
+<head>
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="https://mmp.unej.ac.id/pluginfile.php/1/theme_essential/favicon/1586652111/favicon.ico"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, Dashboard" />
+<link rel="stylesheet" type="text/css" href="https://mmp.unej.ac.id/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://mmp.unej.ac.id/theme/styles.php/essential/1586652111_1585440894/all" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/mmp.unej.ac.id","sesskey":"Cogeabg2hE","themerev":"1586652111","slasharguments":1,"theme":"essential","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1586652111","admin":"admin","svgicons":true,"usertimezone":"Asia\/Jakarta","contextid":472505};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/mmp.unej.ac.id\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/mmp.unej.ac.id\/theme\/yui_combo.php?","combine":false,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/mmp.unej.ac.id\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/mmp.unej.ac.id\/theme\/yui_combo.php?","combine":false,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/mmp.unej.ac.id\/theme\/yui_combo.php?m\/1586652111\/","combine":false,"comboBase":"https:\/\/mmp.unej.ac.id\/theme\/yui_combo.php?","ext":false,"root":"m\/1586652111\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_mobileapp-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-rooms":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-recordings":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-broker":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-imports":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-modform":{"requires":["base","node"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/mmp.unej.ac.id\/lib\/yuilib\/gallery\/","combine":false,"comboBase":"https:\/\/mmp.unej.ac.id\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1586652111\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/mmp.unej.ac.id\/lib\/javascript.php\/1586652111\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/mmp.unej.ac.id\/lib\/javascript.php\/1586652111\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.2\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<meta name="google-site-verification" content="usv8T3wASx7BZUyfAFldL-rWEAz95d54G3wRZd_uV5I" />    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google web fonts -->
+        <!-- iOS Homescreen Icons -->
+    
+<link rel="apple-touch-icon" sizes="57x57" href="https://mmp.unej.ac.id/theme/image.php/essential/theme/1586652111/homeicon/iphone"/>
+<link rel="apple-touch-icon" sizes="72x72" href="https://mmp.unej.ac.id/theme/image.php/essential/theme/1586652111/homeicon/ipad"/>
+<link rel="apple-touch-icon" sizes="114x114" href="https://mmp.unej.ac.id/theme/image.php/essential/theme/1586652111/homeicon/iphone_retina"/>
+<link rel="apple-touch-icon" sizes="144x144" href="https://mmp.unej.ac.id/theme/image.php/essential/theme/1586652111/homeicon/ipad_retina"/>
+<style>
+html, body{
+  width:100%;
+  height:100%;
+  margin:0;
+  font: bold 17px 'FontAwesome', sans-serif;
+}
+
+.blur{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+a.btn{
+  width:150px;
+  display:block;
+  margin:-25px 0 0 -75px;
+  padding:1em 0;
+  position:absolute;
+  top:50%; left:50%;
+  font:1.125em 'Arial', sans-serif;
+  font-weight:700;
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  border-radius:5px;
+  background:rgba(217,67,86,1);
+}
+
+.modal-wrapper{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0; left:0;
+  background:rgba(11, 0, 36, 0.33);
+  visibility:hidden;
+  opacity:0;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  z-index: 999;
+}
+
+.modal-wrapper.open{
+  opacity:1;
+  visibility:visible;
+}
+
+.modal{
+  width:60rem;
+  height:auto;
+  display:block;
+  margin:50% 0 0 -470px;
+  position:relative;
+  top:50%; left:50%;
+  background:#fff;
+  opacity:0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.modal-wrapper.open .modal{
+  margin-top:-200px;
+  opacity:1;
+}
+
+.head{
+  width:90%;
+  height:32px;
+  padding:1.5em 5%;
+  overflow:hidden;
+  background:#01bce5;
+}
+
+.btn-close{
+  width:32px;
+  height:32px;
+  display:block;
+  float:right;
+}
+
+.btn-close::before, .btn-close::after{
+  content:'';
+  width:32px;
+  height:6px;
+  display:block;
+  background:#fff;
+}
+
+.btn-close::before{
+  margin-top:12px;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+
+.btn-close::after{
+  margin-top:-6px;
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+
+.content{
+  padding: 0 10px 5% 10px;
+}
+
+div.content{
+  background:#fff;
+}
+
+ul > li:before {
+/* content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="yellow" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); */
+    content: "\f005";
+    color: #f1c40f;
+    display: block;
+    font-size: 30px;
+    float: left;
+    margin: -7px 20px 0 0;
+}
+table{
+  width: 100%;
+}
+
+table>thead{
+color:#fff;
+}
+
+ul > li {
+    padding-top: 5px;
+    list-style-type: none;
+}
+
+a.button{
+  text-decoration: none;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #01bce5;
+  padding: 7px 20px;
+  color:#01bce5;
+  font-weight: normal;
+}
+
+a.button:hover{
+  background: #01bce5;
+  border: 1px solid #01bce5;
+  color: #fff;
+}
+
+span.point{
+  border-radius: 50%;
+  color: #fff;
+  background: #01bce5;
+  padding: 10px;
+}
+
+.flash {
+  display: block;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 350px;
+  padding: 20px 25px 20px 120px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #66847C;
+  background-color: #FFF;
+  border: 2px solid #01bce5;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.0182);
+  opacity: 0;
+  z-index: 9999;
+}
+
+.flash__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1.5em;
+  height: 100%;
+  padding: 0 0.4em 0 1em;
+  background-color: #01bce5;
+  color: #FFF;
+  font-size: 36px;
+  font-weight: 300;
+  transform: translate(0, -50%);
+}
+.flash__icon .icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+
+@-webkit-keyframes drop-in-fade-out {
+  0% {
+    opacity: 0;
+    visibility: visible;
+    -webkit-transform: translate3d(0, -200%, 0);
+    -moz-transform: translate3d(0, -200%, 0);
+    -ms-transform: translate3d(0, -200%, 0);
+    -o-transform: translate3d(0, -200%, 0);
+    transform: translate3d(0, -200%, 0);
+  }
+  12% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(75%, 0, 0);
+    -moz-transform: translate3d(75%, 0, 0);
+    -ms-transform: translate3d(75%, 0, 0);
+    -o-transform: translate3d(75%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+  }
+}
+@-moz-keyframes drop-in-fade-out {
+  0% {
+    opacity: 0;
+    visibility: visible;
+    -webkit-transform: translate3d(0, -200%, 0);
+    -moz-transform: translate3d(0, -200%, 0);
+    -ms-transform: translate3d(0, -200%, 0);
+    -o-transform: translate3d(0, -200%, 0);
+    transform: translate3d(0, -200%, 0);
+  }
+  12% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(75%, 0, 0);
+    -moz-transform: translate3d(75%, 0, 0);
+    -ms-transform: translate3d(75%, 0, 0);
+    -o-transform: translate3d(75%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+  }
+}
+@-o-keyframes drop-in-fade-out {
+  0% {
+    opacity: 0;
+    visibility: visible;
+    -webkit-transform: translate3d(0, -200%, 0);
+    -moz-transform: translate3d(0, -200%, 0);
+    -ms-transform: translate3d(0, -200%, 0);
+    -o-transform: translate3d(0, -200%, 0);
+    transform: translate3d(0, -200%, 0);
+  }
+  12% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(75%, 0, 0);
+    -moz-transform: translate3d(75%, 0, 0);
+    -ms-transform: translate3d(75%, 0, 0);
+    -o-transform: translate3d(75%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+  }
+}
+@keyframes drop-in-fade-out {
+  0% {
+    opacity: 0;
+    visibility: visible;
+    -webkit-transform: translate3d(0, -200%, 0);
+    -moz-transform: translate3d(0, -200%, 0);
+    -ms-transform: translate3d(0, -200%, 0);
+    -o-transform: translate3d(0, -200%, 0);
+    transform: translate3d(0, -200%, 0);
+  }
+  12% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(75%, 0, 0);
+    -moz-transform: translate3d(75%, 0, 0);
+    -ms-transform: translate3d(75%, 0, 0);
+    -o-transform: translate3d(75%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+  }
+}
+.animate--drop-in-fade-out {
+  -webkit-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+  -moz-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+  -ms-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+  -o-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+  animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+}    
+</style>
+</head>
+
+<body  id="page-my-index" class="format-site  path-my chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam mmp-unej-ac-id pagelayout-mydashboard course-1 context-472505 loggedin desktopdevice pagewidthvariable custommenuitems categoryicons floatingsubmit has-region-content used-region-content has-region-side-pre used-region-side-pre has-region-footer-left empty-region-footer-left has-region-footer-middle empty-region-footer-middle has-region-footer-right empty-region-footer-right has-region-header empty-region-header has-region-page-top empty-region-page-top has-region-side-post used-region-side-post">
+
+<div class="skiplinks">
+    <a href="#maincontent" class="skip">Skip to main content</a>
+</div><script type="text/javascript" src="https://mmp.unej.ac.id/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script type="text/javascript" src="https://mmp.unej.ac.id/lib/javascript.php/1586652111/lib/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<header role="banner">
+    <div id="page-header" class="clearfix oldnavbar logo">
+        <div class="container-fluid">
+            <div class="row-fluid">
+<div class="pull-left logo-container"><a class="logo" href="//mmp.unej.ac.id" title="Home"><img src="//mmp.unej.ac.id/pluginfile.php/1/theme_essential/logo/1586652111/mmpfront.png" class="img-responsive" alt="Home" /></a>                </div>
+                                <a class="btn btn-icon collapsed" data-toggle="collapse" data-target="#essentialicons">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+
+                <div id='essentialicons' class="collapse pull-right">
+                        <div class="pull-right" id="socialnetworks">
+                            <p class="socialheading">Social networks</p>
+                            <ul class="socials unstyled">
+                                <li><button type="button" class="socialicon twitter" onclick="window.open(&#039;https://twitter.com/official_unej&#039;)" title="Twitter" aria-label="Twitter"><span aria-hidden="true" class="fa fa-twitter"></span><span class="sr-only"></span></button></li><li><button type="button" class="socialicon facebook" onclick="window.open(&#039;https://www.facebook.com/unejofficial&#039;)" title="Facebook" aria-label="Facebook"><span aria-hidden="true" class="fa fa-facebook"></span><span class="sr-only"></span></button></li><li><button type="button" class="socialicon youtube" onclick="window.open(&#039;https://www.youtube.com/channel/UCjn_I-pBcV4PFKOasvtCgOQ&#039;)" title="YouTube" aria-label="YouTube"><span aria-hidden="true" class="fa fa-youtube"></span><span class="sr-only"></span></button></li><li><button type="button" class="socialicon website" onclick="window.open(&#039;https://unej.ac.id&#039;)" title="Website" aria-label="Website"><span aria-hidden="true" class="fa fa-globe"></span><span class="sr-only"></span></button></li>                            </ul>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+    <nav id="essentialnavbar" role="navigation" class="moodle-has-zindex oldnavbar logo">
+        <div class="navbar">
+            <div class="container-fluid navbar-inner">
+                <div class="row-fluid">
+                    <div class="custommenus pull-left">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target="#essentialmenus">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://mmp.unej.ac.id/">MMP</a>                    <div class="pull-right">
+                        <div class="usermenu navbarrightitem">
+                            <ul class="nav"><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="https://mmp.unej.ac.id/my/index.php"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f1" class="userpicture defaultuserpic" width="72" height="72" alt="Picture of MUHAMMAD DHAIS 162410101076" title="Picture of MUHAMMAD DHAIS 162410101076" />MUHAMMAD DHAIS<span aria-hidden="true" class="fa fa-caret-right"></span></a><ul class="dropdown-menu pull-right"><li><a href="https://mmp.unej.ac.id/user/profile.php?id=47172"><em><span aria-hidden="true" class="fa fa-user"></span>MUHAMMAD DHAIS 162410101076</em></a></li><li class="dropdown-submenu preferences"><a class="dropdown-toggle" data-toggle="dropdown" href="https://mmp.unej.ac.id/my/index.php"><em><span aria-hidden="true" class="fa fa-cog"></span>Preferences</em></a><ul class="dropdown-menu"><li><a href="https://mmp.unej.ac.id/user/preferences.php?userid=47172"><em><span aria-hidden="true" class="fa fa-user"></span>User</em></a></li><li><a href="https://mmp.unej.ac.id/blog/preferences.php"><em><span aria-hidden="true" class="fa fa-rss-square"></span>Blog</em></a></li></ul></li><hr class="sep" /><li><a href="https://mmp.unej.ac.id/message/index.php"><em><span aria-hidden="true" class="fa fa-envelope"></span>Messages</em></a></li><li><a href="https://mmp.unej.ac.id/user/files.php"><em><span aria-hidden="true" class="fa fa-file"></span>Private files</em></a></li><li><a href="https://mmp.unej.ac.id/mod/forum/user.php?id=47172"><em><span aria-hidden="true" class="fa fa-list-alt"></span>Forum posts</em></a></li><li><a href="https://mmp.unej.ac.id/mod/forum/user.php?id=47172&amp;mode=discussions"><em><span aria-hidden="true" class="fa fa-list"></span>Discussions</em></a></li><hr class="sep" /><li><a href="https://mmp.unej.ac.id/login/logout.php?sesskey=Cogeabg2hE"><em><span aria-hidden="true" class="fa fa-sign-out"></span>Log out</em></a></li><li><a target="_blank" href="https://www.facebook.com/groups/ujelearning"><em><span aria-hidden="true" class="fa fa-question-circle"></span>Help</em></a></li></ul></li></ul>                        </div>
+                        <div class="messagemenu navbarrightitem">
+                            <div class="pull-right popover-region collapsed">
+    <a id="message-drawer-toggle-5e929863207335e9298630eb8312" class="nav-link d-inline-block popover-region-toggle position-relative" href="#">
+        <i class="icon fa fa-comment fa-fw "  title="Messages" aria-label="Messages"></i>
+        <div class="count-container hidden" data-region="count-container">0</div>
+    </a>
+</div><div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="47172"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        role="button"
+        aria-controls="popover-region-container-5e929863216245e9298630eb8313"
+        aria-haspopup="true"
+        aria-label="Show notification window with no new notifications"
+        tabindex="0">
+                <i class="icon fa fa-bell fa-fw "  title="Toggle notifications menu" aria-label="Toggle notifications menu"></i>
+        <div class="count-container hidden" data-region="count-container"
+        aria-label="There are 0 unread notifications">0</div>
+
+    </div>
+    <div 
+        id="popover-region-container-5e929863216245e9298630eb8313"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Notification window"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifications</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button"
+           href="#"
+           title="Mark all as read"
+           data-action="mark-all-read"
+           role="button">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw "  title="Mark all as read" aria-label="Mark all as read"></i></span>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+        </a>
+        <a href="https://mmp.unej.ac.id/message/notificationpreferences.php?userid=47172"
+           title="Notification preferences">
+            <i class="icon fa fa-cog fa-fw "  title="Notification preferences" aria-label="Notification preferences"></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">You have no notifications</div>
+
+            </div>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://mmp.unej.ac.id/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">See all</div>
+                    </div>
+                </a>
+    </div>
+</div>                        </div>
+                        <div class="navbarrightitem">
+                                                    </div>
+                                                                        <div id="custom_menu_editing" class="navbarrightitem">
+                                                    </div>
+                        <div class="navbarrightitem">
+                                                    </div>
+                    </div>
+                        <div id="essentialmenus" class="nav-collapse collapse pull-left">
+                            <div id="custom_menu_language" class="custom_menu dropdownmenuscroll"><ul class="nav"><li class="dropdown langmenu"><a href="https://mmp.unej.ac.id/my/index.php" class="dropdown-toggle" data-toggle="dropdown" title="Language"><span aria-hidden="true" class="fa fa-flag"></span>English ‎(en)‎<span aria-hidden="true" class="fa fa-caret-right"></span></a><div class="dropdown-menu"><ul><li><a title="English ‎(en)‎" href="https://mmp.unej.ac.id/my/index.php?lang=en"><span aria-hidden="true" class="fa fa-language"></span>English ‎(en)‎</a></li><li><a title="Indonesian ‎(id)‎" href="https://mmp.unej.ac.id/my/index.php?lang=id"><span aria-hidden="true" class="fa fa-language"></span>Indonesian ‎(id)‎</a></li></ul></div></ul></div><div id="custom_menu_courses" class="custom_menu dropdownmenuscroll"><ul class="nav"><li class="dropdown"><a href="https://mmp.unej.ac.id/my/index.php" class="dropdown-toggle" data-toggle="dropdown" title="My courses"><span aria-hidden="true" class="fa fa-briefcase"></span>My courses<span aria-hidden="true" class="fa fa-caret-right"></span></a><div class="dropdown-menu"><ul><li><a title="Dashboard" href="https://mmp.unej.ac.id/my/index.php"><span><span aria-hidden="true" class="fa fa-home"></span><span> Dashboard</span></span></a></li><li><a title="Skripsi (A-PR-8545)-19202" href="https://mmp.unej.ac.id/course/view.php?id=87029"><span><span aria-hidden="true" class="fa fa-graduation-cap"></span>Skripsi (A-PR-8545)-19202</span></a></li></ul></div></ul></div><div id="custom_menu" class="custom_menu dropdownsubmenuscroll"><ul class="nav"><li><a title="SISTER" href="https://sister.unej.ac.id" target=\"_blank">SISTER</a></li><li><a title="Panduan MMP" href="https://www.youtube.com/watch?v=v2E4UXFU1Z8&amp;list=PLd6V7cLSh9pG8waAI7iDJcD5D3EGDLkW1">Panduan MMP</a></li></ul></div>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div id="page" class="container-fluid">
+    <div id="page-top-header" class="clearfix"><div id="page-navbar" class="clearfix row-fluid"><div class="breadcrumb-nav span9"><span class="accesshide" id="navbar-label">Page path</span><nav aria-labelledby="navbar-label"><ul class="breadcrumb style1"><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" aria-current="page" href="https://mmp.unej.ac.id/my/"><span itemprop="title">Dashboard</span></a></span></li></ul></nav></div><nav class="breadcrumb-button span3"><div class="singlebutton"><form method="post" action="https://mmp.unej.ac.id/my/index.php"><div><input type="submit" value="Customise this page" /><input type="hidden" name="edit" value="1" /><input type="hidden" name="sesskey" value="Cogeabg2hE" /></div></form></div></nav></div></div><aside id="block-region-header" class="row-fluid block-region rowblock-blocks" data-blockregion="header" data-droptarget="1"></aside>    <!-- Start Main Regions -->
+    <div id="page-content" class="row-fluid">
+        <div id="main-and-pre" class="span9">            <div class="row-fluid">
+<div id="content" class="span8 desktop-first-column"><aside id="block-region-page-top" class="row-fluid block-region rowblock-blocks" data-blockregion="page-top" data-droptarget="1"></aside><section id="region-main"><span class="notifications" id="user-notifications"></span><div role="main"><span id="maincontent"></span><aside id="block-region-content" class="block-region" data-blockregion="content" data-droptarget="1"><a class="skip skip-block" id="fsb-2" href="#sb-2">Skip Course overview</a><div id="inst299675" class="block_myoverview block" role="complementary" data-block="myoverview" data-instanceid="299675" aria-labelledby="instance-299675-header"><div class="header"><div class="title"><div class="block_action"></div><span aria-hidden="true" class="fa fa-navicon"></span><h2 id="instance-299675-header">Course overview</h2></div></div><div class="content"><div id="block-myoverview-5e9298630eb7d5e9298630eb831" class="block-myoverview block-cards" data-region="myoverview" role="navigation">
+
+            <div data-region="filter" class="d-flex align-items-center flex-wrap" aria-label="Course overview controls">
+                <div class="dropdown m-b-1 mr-auto">
+                    <button id="groupingdropdown" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Grouping drop-down menu">
+                        <i class="icon fa fa-filter fa-fw " aria-hidden="true"  ></i>
+                        <span class="d-sm-inline-block" data-active-item-text>
+                            All
+                            
+                            
+                            
+                            
+                            
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu" data-show-active-item data-active-item-text aria-labelledby="groupingdropdown">
+                        <li>
+                            <a class="dropdown-item active" href="#" data-filter="grouping" data-value="all" data-pref="all" aria-label="All courses" aria-controls="courses-view-5e9298630eb7d5e9298630eb831">
+                                All
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item " href="#" data-filter="grouping" data-value="inprogress" data-pref="inprogress" aria-label="Show courses in progress" aria-controls="courses-view-5e9298630eb7d5e9298630eb831">
+                                In progress
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item " href="#" data-filter="grouping" data-value="future" data-pref="future" aria-label="Show future courses" aria-controls="courses-view-5e9298630eb7d5e9298630eb831">
+                                Future
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item " href="#" data-filter="grouping" data-value="past" data-pref="past" aria-label="Show past courses" aria-controls="courses-view-5e9298630eb7d5e9298630eb831">
+                                Past
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item " href="#" data-filter="grouping" data-value="favourites"  data-pref="favourites" aria-label="Show starred courses" aria-controls="courses-view-5e9298630eb7d5e9298630eb831">
+                                Starred
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item " href="#" data-filter="grouping" data-value="hidden"  data-pref="hidden" aria-label="Show hidden courses" aria-controls="courses-view-5e9298630eb7d5e9298630eb831">
+                                Hidden
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <div class="m-b-1 mr-1 d-flex align-items-center">
+                    <div class="d-none d-md-inline-block mr-1">Sort by</div>
+                    <div class="dropdown">
+                        <button id="sortingdropdown" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false" aria-label="Sorting drop-down menu">
+                            <span data-active-item-text>
+                                Course name
+                                
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu" data-show-active-item aria-labelledby="sortingdropdown">
+                            <li>
+                                <a class="dropdown-item active" href="#" data-filter="sort" data-pref="title" data-value="fullname" aria-label="Sort courses by course name" aria-controls="courses-view-5e9298630eb7d5e9298630eb831">
+                                    Course name
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item " href="#" data-filter="sort" data-pref="lastaccessed" data-value="ul.timeaccess desc" aria-label="Sort courses by last accessed date" aria-controls="courses-view-5e9298630eb7d5e9298630eb831">
+                                    Last accessed
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown m-b-1">
+                    <button id="displaydropdown" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    aria-label="Display drop-down menu">
+                        <i class="icon fa fa-th fa-fw " aria-hidden="true"  ></i>
+                        <span class="d-sm-inline-block" data-active-item-text>
+                            Card
+                            
+                            
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu" data-show-active-item aria-labelledby="displaydropdown">
+                        <li>
+                            <a class="dropdown-item active" href="#" data-display-option="display" data-value="cards" data-pref="cards" aria-label="Switch to card view" aria-controls="courses-view-5e9298630eb7d5e9298630eb831">
+                            Card
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item " href="#" data-display-option="display" data-value="list" data-pref="list" aria-label="Switch to list view" aria-controls="courses-view-5e9298630eb7d5e9298630eb831">
+                            List
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item " href="#" data-display-option="display" data-value="summary" data-pref="summary" aria-label="Switch to summary view" aria-controls="courses-view-5e9298630eb7d5e9298630eb831">
+                            Summary
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+    <div class="container-fluid p-0">
+        <div id="courses-view-5e9298630eb7d5e9298630eb831"
+            data-region="courses-view"
+            data-display="cards"
+            data-grouping="all"
+            data-sort="fullname"
+            data-prev-display="cards"
+            data-paging="12"
+            data-nocoursesimg="https://mmp.unej.ac.id/theme/image.php/essential/block_myoverview/1586652111/courses">
+            <div data-region="course-view-content">
+                <div data-region="loading-placeholder-content" aria-hidden="true">
+                    <div class="card-deck dashboard-card-deck one-row" style="height: 13rem">
+                        <div class="card dashboard-card border-0">
+                            <div class="card-img-top bg-pulse-grey w-100" style="height: 7rem">
+                            </div>
+                            <div class="card-body course-info-container">
+                                <div class="bg-pulse-grey w-100" style="height: 1rem"></div>
+                            </div>
+                        </div>
+                        <div class="card dashboard-card border-0">
+                            <div class="card-img-top bg-pulse-grey w-100" style="height: 7rem">
+                            </div>
+                            <div class="card-body course-info-container">
+                                <div class="bg-pulse-grey w-100" style="height: 1rem"></div>
+                            </div>
+                        </div>
+                        <div class="card dashboard-card border-0">
+                            <div class="card-img-top bg-pulse-grey w-100" style="height: 7rem">
+                            </div>
+                            <div class="card-body course-info-container">
+                                <div class="bg-pulse-grey w-100" style="height: 1rem"></div>
+                            </div>
+                        </div>
+                        <div class="card dashboard-card border-0">
+                            <div class="card-img-top bg-pulse-grey w-100" style="height: 7rem">
+                            </div>
+                            <div class="card-body course-info-container">
+                                <div class="bg-pulse-grey w-100" style="height: 1rem"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    </div>
+</div></div></div><span class="skip-block-to" id="sb-2"></span><a class="skip skip-block" id="fsb-3" href="#sb-3">Skip Recently accessed courses</a><div id="inst503226" class="block_recentlyaccessedcourses block" role="complementary" data-block="recentlyaccessedcourses" data-instanceid="503226" aria-labelledby="instance-503226-header"><div class="header"><div class="title"><div class="block_action"></div><span aria-hidden="true" class="fa fa-navicon"></span><h2 id="instance-503226-header">Recently accessed courses</h2></div></div><div class="content"><div id="block-recentlyaccessedcourses-5e929863104cb5e9298630eb832" class="block-recentlyaccessedcourses block-cards" data-region="recentlyaccessedcourses"
+     data-userid="47172">
+    <div class="container-fluid p-0">
+        <div id="recentlyaccessedcourses-view-5e929863104cb5e9298630eb832"
+             data-region="recentlyaccessedcourses-view"
+             data-nocoursesimgurl="https://mmp.unej.ac.id/theme/image.php/essential/block_recentlyaccessedcourses/1586652111/courses">
+            <div data-region="recentlyaccessedcourses-view-content">
+                <div data-region="recentlyaccessedcourses-loading-placeholder">
+                    <div class="card-deck dashboard-card-deck one-row" style="height: 11.1rem">
+                        <div class="card dashboard-card border-0">
+                            <div class="card-img-top bg-pulse-grey w-100" style="height: 7rem">
+                            </div>
+                            <div class="card-body pr-1 course-info-container">
+                                <div class="bg-pulse-grey w-100" style="height: 1rem"></div>
+                            </div>
+                        </div>
+                        <div class="card dashboard-card border-0">
+                            <div class="card-img-top bg-pulse-grey w-100" style="height: 7rem">
+                            </div>
+                            <div class="card-body pr-1 course-info-container">
+                                <div class="bg-pulse-grey w-100" style="height: 1rem"></div>
+                            </div>
+                        </div>
+                        <div class="card dashboard-card border-0">
+                            <div class="card-img-top bg-pulse-grey w-100" style="height: 7rem">
+                            </div>
+                            <div class="card-body pr-1 course-info-container">
+                                <div class="bg-pulse-grey w-100" style="height: 1rem"></div>
+                            </div>
+                        </div>
+                        <div class="card dashboard-card border-0">
+                            <div class="card-img-top bg-pulse-grey w-100" style="height: 7rem">
+                            </div>
+                            <div class="card-body pr-1 course-info-container">
+                                <div class="bg-pulse-grey w-100" style="height: 1rem"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    </div>
+</div></div></div><span class="skip-block-to" id="sb-3"></span></aside></div></section></div><aside id="block-region-side-pre" class="span4 pull-right block-region" data-blockregion="side-pre" data-droptarget="1" data-region="drawer"><div class="block block_flat_navigation">
+    <nav class="list-group">
+         <a class="list-group-item list-group-item-action bold" href="https://mmp.unej.ac.id/my/" data-key="myhome">
+             <div class="m-l-0">
+                     Dashboard
+             </div>
+         </a>
+         <a class="list-group-item list-group-item-action " href="https://mmp.unej.ac.id/?redirect=0" data-key="home">
+             <div class="m-l-0">
+                     Site home
+             </div>
+         </a>
+         <a class="list-group-item list-group-item-action " href="https://mmp.unej.ac.id/calendar/view.php?view=month" data-key="calendar">
+             <div class="m-l-0">
+                     Calendar
+             </div>
+         </a>
+         <a class="list-group-item list-group-item-action " href="https://mmp.unej.ac.id/user/files.php" data-key="privatefiles">
+             <div class="m-l-0">
+                     Private files
+             </div>
+         </a>
+         <div class="list-group-item" data-key="mycourses">
+             <div class="m-l-0">
+                 My courses
+             </div>
+         </div>
+         <a class="list-group-item list-group-item-action " href="https://mmp.unej.ac.id/course/view.php?id=87029" data-key="87029">
+             <div class="m-l-1">
+                     Skripsi (A-PR-8545)-19202
+             </div>
+         </a>
+     </nav>
+</div></aside>            </div>
+        </div>
+        <aside id="block-region-side-post" class="span3 block-region" data-blockregion="side-post" data-droptarget="1"><a class="skip skip-block" id="fsb-6" href="#sb-6">Skip Latest badges</a><div id="inst299676" class="block_badges block" role="complementary" data-block="badges" data-instanceid="299676" aria-labelledby="instance-299676-header"><div class="header"><div class="title"><div class="block_action"></div><span aria-hidden="true" class="fa fa-navicon"></span><h2 id="instance-299676-header">Latest badges</h2></div></div><div class="content">Badges are not enabled on this site.</div></div><span class="skip-block-to" id="sb-6"></span><a class="skip skip-block" id="fsb-7" href="#sb-7">Skip Online users</a><div id="inst299674" class="block_online_users block" role="complementary" data-block="online_users" data-instanceid="299674" aria-labelledby="instance-299674-header"><div class="header"><div class="title"><div class="block_action"></div><span aria-hidden="true" class="fa fa-users"></span><h2 id="instance-299674-header">Online users</h2></div></div><div class="content"><div class="info">217 online users (last 5 minutes)</div><ul class='list'>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=64826&amp;course=1" title="2 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/604735/user/icon/essential/f2?rev=5738397" class="userpicture" width="16" height="16" />HENI NURHIDAYAH 172210101035</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=64826"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=82606&amp;course=1" title="2 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />VANESSA MAE 190803101062</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=82606"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=72159&amp;course=1" title="3 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />DWI FAJARWATI RAMADHANI 181810401017</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=72159"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=77698&amp;course=1" title="3 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />TIARA CANDRA MIRELLA 191810101061</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=77698"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=68353&amp;course=1" title="4 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/770138/user/icon/essential/f2?rev=3646419" class="userpicture" width="16" height="16" />DEWINTA PUTRI WIDHAYANTY 180210302121</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=68353"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=60973&amp;course=1" title="4 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />ALFIA FAJARWATI 170710101222</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=60973"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=79053&amp;course=1" title="5 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />NOR KHOLIL 192410101018</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=79053"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=67477&amp;course=1" title="6 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />EVA NADILAH GIANDITA 180210103119</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=67477"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=78459&amp;course=1" title="9 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />NUR FAIZA MANDARINI 192210101107</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=78459"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=78426&amp;course=1" title="9 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />SINDI AYUNI FEBRIANTI 192210101073</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=78426"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=24718&amp;course=1" title="10 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />EDI WAHJUNI 196812302003122001</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=24718"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=67371&amp;course=1" title="12 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />YURIKA NURAENI 180210103013</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=67371"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=24810&amp;course=1" title="12 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />AHMAD ROZIQ 197004281997021001</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=24810"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=79521&amp;course=1" title="13 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />MUHAMMAD RIZQI HIDAYAT 192410103017</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=79521"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=59012&amp;course=1" title="14 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />YUNITA WIJAYANTHI NINGSIH 171810101002</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=59012"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=83046&amp;course=1" title="14 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/1098424/user/icon/essential/f2?rev=16629154" class="userpicture" width="16" height="16" />NURUL AULIYA FARADIZA 190210104116</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=83046"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=67361&amp;course=1" title="15 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />AISA AULIA NUR AINI 180210103003</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=67361"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=33815&amp;course=1" title="17 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/216974/user/icon/essential/f2?rev=4439150" class="userpicture" width="16" height="16" />DIMAS TRI KRISNANTO 150210103108</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=33815"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=67827&amp;course=1" title="18 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/771613/user/icon/essential/f2?rev=17159451" class="userpicture" width="16" height="16" />FADHILAH PRASETYANING DATI 180210204142</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=67827"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=73797&amp;course=1" title="19 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />KARIMAH 182410101035</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=73797"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=67491&amp;course=1" title="20 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />AVIDA IMATUS SOLIKHAH 180210103133</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=67491"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=48763&amp;course=1" title="21 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />RIZKI DWI PRASEPTA 160810301046</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=48763"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=24588&amp;course=1" title="23 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/24612/user/icon/essential/f2?rev=2543446" class="userpicture" width="16" height="16" />PARTO, 196311161989031001</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=24588"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=75024&amp;course=1" title="23 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />AMALIA HAYUDIARTI 181611101017</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=75024"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=60395&amp;course=1" title="24 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />NAFIA AMALIA 172010101039</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=60395"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=74054&amp;course=1" title="24 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />ATIIQAH NABILAH IMTIYAZ 182410103055</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=74054"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=84553&amp;course=1" title="24 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />SITA AMELIA 191611101105</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=84553"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=73518&amp;course=1" title="24 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />RIMA NOVITA PUSPASARI 182210101157</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=73518"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=76158&amp;course=1" title="26 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />SITTA USSI SYAH 190210401076</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=76158"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=60333&amp;course=1" title="27 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />SITI AMINATUL HASANAH 170210204030</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=60333"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=70550&amp;course=1" title="27 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />ANNISA NUR FAIDZA 180910201042</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=70550"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=78353&amp;course=1" title="27 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/1093731/user/icon/essential/f2?rev=13038366" class="userpicture" width="16" height="16" />LUTFIAH RAMDAINI 192110101111</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=78353"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=79387&amp;course=1" title="28 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />WINDA RAHMAWATI 190210103024</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=79387"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=75671&amp;course=1" title="29 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />FARAH HAFIZHA 190210103078</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=75671"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=64847&amp;course=1" title="29 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />NUR FAUZIAH 171510601012</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=64847"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=66763&amp;course=1" title="31 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />AYU FATIMATUZ ZAHRA PUTRI 180110101072</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=66763"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=59394&amp;course=1" title="31 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/595536/user/icon/essential/f2?rev=13623846" class="userpicture" width="16" height="16" />ANGEL NOVITA TRI LARA ATICA 171910301146</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=59394"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=50473&amp;course=1" title="31 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/477241/user/icon/essential/f2?rev=2518606" class="userpicture" width="16" height="16" />Berlian 198402032015042001</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=50473"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=24994&amp;course=1" title="33 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />SIGIT SOEPARJONO, 196005061987021001</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=24994"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=58749&amp;course=1" title="35 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/594628/user/icon/essential/f2?rev=3691076" class="userpicture" width="16" height="16" />ROMY HAQQY MANOPO 171510501017</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=58749"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=67409&amp;course=1" title="37 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/771361/user/icon/essential/f2?rev=5389878" class="userpicture" width="16" height="16" />FRINTIANA DYANE PUTRI 180210103051</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=67409"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=25233&amp;course=1" title="37 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />MUTMAINNAH 197005101997022001</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=25233"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=61046&amp;course=1" title="38 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />YURI SRI AJI PANGASTUTI 170910301070</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=61046"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=67912&amp;course=1" title="38 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />RETNO HASTUTI 180210204227</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=67912"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=82311&amp;course=1" title="39 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />RIZKA FAJRIYAH RAMADHANA 190210103123</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=82311"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=71319&amp;course=1" title="40 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/769115/user/icon/essential/f2?rev=13020334" class="userpicture" width="16" height="16" />GILANG MUDIANTORO 181510701003</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=71319"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=79926&amp;course=1" title="41 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />RISMATUL FAIZAH 190210402027</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=79926"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=59575&amp;course=1" title="41 secs"><img src="https://mmp.unej.ac.id/pluginfile.php/595883/user/icon/essential/f2?rev=6395308" class="userpicture" width="16" height="16" />ARATI ZAHRA 170210302064</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=59575"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=81546&amp;course=1" title="42 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />DINAR YESICA WIJAYANTI 190210204242</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=81546"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+<li class="listentry"><div class="user"><a href="https://mmp.unej.ac.id/user/view.php?id=79063&amp;course=1" title="43 secs"><img src="https://mmp.unej.ac.id/theme/image.php/essential/core/1586652111/u/f2" class="userpicture defaultuserpic" width="16" height="16" />RIZKY AYU WULANDARI 190210402002</a></div><div class="message"><a title="Send a message" href="https://mmp.unej.ac.id/message/index.php?id=79063"><i class="icon fa fa-comment fa-fw "  title="Send a message" aria-label="Send a message"></i></a></div></li>
+</ul><div class="clearer"><!-- --></div></div></div><span class="skip-block-to" id="sb-7"></span></aside>    </div>
+    <!-- End Main Regions -->
+    <div
+    id="message-drawer-5e92986323a195e9298630eb8316"
+    class="message-drawer bg-light hidden modal essential-message-drawer"
+    aria-expanded="false"
+    aria-hidden="true"
+    data-region="message-drawer"
+    role="region"
+>
+    <div class="p-2 border-bottom bg-secondary modal-header">
+        Messages
+        <a id="message-drawer-close-5e92986323a195e9298630eb8316" class="pull-right" href="#">
+            <i class="icon fa fa-window-close fa-fw "  title="Toggle messaging drawer" aria-label="Toggle messaging drawer"></i>
+        </a>
+    </div>
+    <div class="header-container position-relative modal-body" data-region="header-container">
+        <div class="hidden border-bottom px-2 py-3" aria-hidden="true" data-region="view-contacts">
+            <div class="d-flex align-items-center">
+                <div class="align-self-stretch">
+                    <a class="h-100 d-flex align-items-center mr-2" href="#" data-route-back role="button">
+                        <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"  ></i></span>
+                        <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"  ></i></span>                    </a>
+                </div>
+                <div>
+                    Contacts
+                </div>
+                <div class="ml-auto">
+                    <a href="#" data-route="view-search" role="button" aria-label="Search">
+                        <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                    </a>
+                </div>
+            </div>
+        </div>        
+        <div
+            class="hidden bg-white position-relative border-bottom px-2 py-2"
+            aria-hidden="true"
+            data-region="view-conversation"
+        >
+            <div class="hidden" data-region="header-content"></div>
+            <div class="hidden" data-region="header-edit-mode">
+                
+                <div class="d-flex p-2 align-items-center">
+                    Messages selected:
+                    <span class="ml-1" data-region="message-selected-court">1</span>
+                    <button type="button" class="ml-auto close" aria-label="Cancel message selection"
+                        data-action="cancel-edit-mode">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div data-region="header-placeholder">
+                <div class="d-flex">
+                    <div class="align-self-stretch" >
+                        <a class="h-100 mr-2 d-flex align-items-center" href="#" data-route-back role="button">
+                            <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"  ></i></span>
+                            <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"  ></i></span>                        </a>
+                    </div>
+                    <div
+                        class="ml-2 rounded-circle bg-pulse-grey align-self-center"
+                        style="height: 38px; width: 38px"
+                    >
+                    </div>
+                    <div class="ml-2 " style="flex: 1">
+                        <div
+                            class="mt-1 bg-pulse-grey w-75"
+                            style="height: 16px;"
+                        >
+                        </div>
+                    </div>
+                    <div
+                        class="ml-2 bg-pulse-grey align-self-center"
+                        style="height: 16px; width: 20px"
+                    >
+                    </div>
+                </div>
+            </div>
+            <div
+                class="hidden position-absolute"
+                data-region="confirm-dialogue-container"
+                style="top: 0; bottom: -1px; right: 0; left: 0; background: rgba(0,0,0,0.3);"
+            ></div>
+        </div>        <div class="border-bottom px-2 py-3" aria-hidden="false" data-region="view-overview">
+            <div class="d-flex align-items-center">
+                <div class="input-prepend d-flex flex-grow m-0">
+                    <span class="add-on bg-white pr-0">
+                        <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                    </span>
+                    <input
+                        type="text"
+                        class="form-control border-left-0 searchinput"
+                        placeholder="Search"
+                        aria-label="Search"
+                        data-region="view-overview-search-input"
+                    >
+                </div>
+                <div class="ml-2">
+                    <a
+                        href="#"
+                        data-route="view-settings"
+                        data-route-param="47172"
+                        aria-label="Settings"
+                        role="button"
+                    >
+                        <i class="icon fa fa-cog fa-fw " aria-hidden="true"  ></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-right mt-3">
+                <a href="#" data-route="view-contacts" role="button">
+                    <i class="icon fa fa-user fa-fw " aria-hidden="true"  ></i>
+                    Contacts
+                    <span class="badge bg-primary ml-2 hidden"
+                    data-region="contact-request-count"
+                    aria-label="There are 0 pending contact requests">
+                        0
+                    </span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="hidden border-bottom px-2 py-3 view-search" aria-hidden="true" data-region="view-search">
+            <div class="d-flex align-items-center">
+                <a
+                    class="mr-2 align-self-stretch d-flex align-items-center"
+                    href="#"
+                    data-route-back
+                    data-action="cancel-search"
+                    role="button"
+                >
+                    <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"  ></i></span>
+                    <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"  ></i></span>                </a>
+                <div class="input-append m-0 d-flex flex-grow">
+                    <input
+                        type="text"
+                        class="form-control border-right-0 searchinput"
+                        placeholder="Search"
+                        aria-label="Search"
+                        data-region="search-input"
+                    >
+                    <button
+                        class="btn m-0"
+                        type="button"
+                        data-action="search"
+                        aria-label="Search"
+                    >
+                        <span data-region="search-icon-container">
+                            <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                        </span>
+                        <span class="hidden" data-region="loading-icon-container">
+                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>        
+        <div class="hidden border-bottom px-2 py-3" aria-hidden="true" data-region="view-settings">
+            <div class="d-flex align-items-center">
+                <div class="align-self-stretch" >
+                    <a class="h-100 d-flex mr-2 align-items-center" href="#" data-route-back role="button">
+                        <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"  ></i></span>
+                        <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"  ></i></span>                    </a>
+                </div>
+                <div>
+                    Settings
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body-container position-relative modal-body" data-region="body-container">
+        
+        <div
+            class="hidden"
+            data-region="view-contact"
+            aria-hidden="true"
+        >
+            <div class="p-2 pt-3" data-region="content-container"></div>
+        </div>        <div class="hidden h-100" aria-hidden="true" data-region="view-contacts" data-user-id="47172">
+            <div class="d-flex flex-column h-100">
+                <div class="p-3 border-bottom">
+                    <ul class="nav nav-pills d-flex m-0" role="tablist">
+                        <li class="nav-item w-50 align-self-stretch text-center active">
+                            <a
+                                id="contacts-tab-5e92986323a195e9298630eb8316"
+                                class="nav-link"
+                                href="#contacts-tab-panel-5e92986323a195e9298630eb8316"
+                                data-toggle="tab"
+                                data-action="show-contacts-section"
+                                role="tab"
+                                aria-controls="contacts-tab-panel-5e92986323a195e9298630eb8316"
+                                aria-selected="true"
+                            >
+                                Contacts
+                            </a>
+                        </li>
+                        <li class="nav-item w-50 text-center">
+                            <a
+                                id="requests-tab-5e92986323a195e9298630eb8316"
+                                class="nav-link"
+                                href="#requests-tab-panel-5e92986323a195e9298630eb8316"
+                                data-toggle="tab"
+                                data-action="show-requests-section"
+                                role="tab"
+                                aria-controls="requests-tab-panel-5e92986323a195e9298630eb8316"
+                                aria-selected="false"
+                            >
+                                Requests
+                                <span class="badge bg-primary ml-2 hidden"
+                                data-region="contact-request-count"
+                                aria-label="There are 0 pending contact requests">
+                                    0
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content d-flex flex-column h-100">
+                            <div
+            class="tab-pane fade in active h-100"
+            style="overflow-y: auto"
+            aria-live="polite"
+            data-region="lazy-load-list"
+            data-user-id="47172"
+                                id="contacts-tab-panel-5e92986323a195e9298630eb8316"
+                    data-section="contacts"
+                    role="tabpanel"
+                    aria-labelledby="contacts-tab-5e92986323a195e9298630eb8316"
+
+        >
+            <div class="onepix">
+            </div>
+            
+            <div class="hidden text-center p-2" data-region="empty-message-container">
+                No contacts
+            </div>
+            <div class="hidden list-group" data-region="content-container">
+                
+            </div>
+            <div class="list-group" data-region="placeholder-container">
+                
+            </div>
+            <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+            </div>
+        </div>
+        
+                            <div
+            class="tab-pane fade h-100"
+            style="overflow-y: auto"
+            aria-live="polite"
+            data-region="lazy-load-list"
+            data-user-id="47172"
+                                id="requests-tab-panel-5e92986323a195e9298630eb8316"
+                    data-section="requests"
+                    role="tabpanel"
+                    aria-labelledby="requests-tab-5e92986323a195e9298630eb8316"
+
+        >
+            <div class="onepix">
+            </div>
+            
+            <div class="hidden text-center p-2" data-region="empty-message-container">
+                No contact requests
+            </div>
+            <div class="hidden list-group" data-region="content-container">
+                
+            </div>
+            <div class="list-group" data-region="placeholder-container">
+                
+            </div>
+            <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>        
+        <div
+            class="view-conversation hidden h-100"
+            aria-hidden="true"
+            data-region="view-conversation"
+            data-user-id="47172"
+            data-midnight="1586624400"
+            data-message-poll-min="10"
+            data-message-poll-max="120"
+            data-message-poll-after-max="300"
+            style="overflow-y: auto; overflow-x: hidden"
+        >
+            <div class="position-relative h-100" data-region="content-container" style="overflow-y: auto; overflow-x: hidden">
+                <div class="content-message-container hidden h-100 px-2 pt-0" data-region="content-message-container" role="log" style="overflow-y: auto; overflow-x: hidden">
+                    <div class="py-3 bg-light sticky-top z-index-1 border-bottom text-center hidden" data-region="contact-request-sent-message-container">
+                        <p class="m-0">Contact request sent</p>
+                        <p class="font-italic font-weight-light" data-region="text"></p>
+                    </div>
+                    <div class="hidden text-center p-3" data-region="more-messages-loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+                </div>
+                <div class="p-4 w-100 h-100 hidden position-absolute" data-region="confirm-dialogue-container" style="top: 0; background: rgba(0,0,0,0.3);">
+                    
+                    <div class="p-3 bg-white" data-region="confirm-dialogue" role="alert">
+                        <h3 class="h6 hidden" data-region="dialogue-header"></h3>
+                        <p class="text-muted" data-region="dialogue-text"></p>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-block">
+                            <span data-region="dialogue-button-text">Block</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-unblock">
+                            <span data-region="dialogue-button-text">Unblock</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-remove-contact">
+                            <span data-region="dialogue-button-text">Remove</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-add-contact">
+                            <span data-region="dialogue-button-text">Add</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-delete-selected-messages">
+                            <span data-region="dialogue-button-text">Delete</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-delete-conversation">
+                            <span data-region="dialogue-button-text">Delete</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="request-add-contact">
+                            <span data-region="dialogue-button-text">Send contact request</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="accept-contact-request">
+                            <span data-region="dialogue-button-text">Accept and add to contacts</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-block hidden" data-action="decline-contact-request">
+                            <span data-region="dialogue-button-text">Decline</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-block" data-action="cancel-confirm">Cancel</button>
+                    </div>
+                </div>
+                <div class="px-2 pb-2 pt-0" data-region="content-placeholder">
+                    <div class="h-100 d-flex flex-column">
+                        <div
+                            class="px-2 pb-2 pt-0 bg-light h-100"
+                            style="overflow-y: auto"
+                        >
+                            <div class="mt-4">
+                                <div class="mb-4">
+                                    <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                            </div>                            <div class="mt-4">
+                                <div class="mb-4">
+                                    <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                            </div>                            <div class="mt-4">
+                                <div class="mb-4">
+                                    <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                            </div>                            <div class="mt-4">
+                                <div class="mb-4">
+                                    <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                            </div>                            <div class="mt-4">
+                                <div class="mb-4">
+                                    <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                            </div>                        </div>
+                    </div>                </div>
+            </div>
+        </div>
+        
+        <div
+            class="hidden"
+            aria-hidden="true"
+            data-region="view-group-info"
+        >
+            <div
+                class="pt-3 h-100 d-flex flex-column"
+                data-region="group-info-content-container"
+                style="overflow-y: auto"
+            ></div>
+        </div>        <div class="h-100 view-overview-body" aria-hidden="false" data-region="view-overview" data-user-id="47172">
+            <div id="message-drawer-view-overview-container" class="d-flex flex-column h-100" style="overflow-y: auto">
+                    
+                    <div
+                        class="accordion-group section border-0 "
+                        data-region="view-overview-favourites"
+                    >
+                        <div id="view-overview-favourites-toggle" class="accordion-heading" data-region="toggle">
+                            <button
+                                class="btn btn-link w-100 text-left p-2 m-0 d-flex align-items-center overview-section-toggle collapsed"
+                                data-toggle="collapse"
+                                data-parent="#message-drawer-view-overview-container"
+                                data-target="#view-overview-favourites-target"
+                                aria-expanded="false"
+                                aria-controls="view-overview-favourites-target"
+                            >
+                                <span class="collapsed-icon-container">
+                                    <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <span class="expanded-icon-container">
+                                    <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <strong>Starred</strong>
+                                <span class="hidden ml-1" data-region="section-total-count-container">
+                                    (<span data-region="section-total-count"></span>)
+                                </span>
+                                <span class="hidden ml-2" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                </span>
+                                <span class="hidden badge badge-pill badge-primary ml-auto bg-primary" data-region="section-unread-count">
+                                    
+                                </span>
+                            </button>
+                        </div>
+                                            <div
+                        class=" accordion-body collapse border-bottom "
+                        style="overflow-y: auto"
+                        aria-live="polite"
+                        data-region="lazy-load-list"
+                        data-user-id="47172"
+                                    id="view-overview-favourites-target"
+            aria-labelledby="view-overview-favourites-toggle"
+            data-parent="#message-drawer-view-overview-container"
+
+                    >
+                        <div class="onepix">
+                        </div>
+                        
+                        <div class="hidden text-center p-2" data-region="empty-message-container">
+                                    <p class="text-muted mt-2">No starred conversations</p>
+
+                        </div>
+                        <div class="hidden list-group" data-region="content-container">
+                            
+                        </div>
+                        <div class="list-group" data-region="placeholder-container">
+                                    <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+
+                        </div>
+                        <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div
+                        class="accordion-group section border-0 "
+                        data-region="view-overview-group-messages"
+                    >
+                        <div id="view-overview-group-messages-toggle" class="accordion-heading" data-region="toggle">
+                            <button
+                                class="btn btn-link w-100 text-left p-2 m-0 d-flex align-items-center overview-section-toggle collapsed"
+                                data-toggle="collapse"
+                                data-parent="#message-drawer-view-overview-container"
+                                data-target="#view-overview-group-messages-target"
+                                aria-expanded="false"
+                                aria-controls="view-overview-group-messages-target"
+                            >
+                                <span class="collapsed-icon-container">
+                                    <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <span class="expanded-icon-container">
+                                    <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <strong>Group</strong>
+                                <span class="hidden ml-1" data-region="section-total-count-container">
+                                    (<span data-region="section-total-count"></span>)
+                                </span>
+                                <span class="hidden ml-2" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                </span>
+                                <span class="hidden badge badge-pill badge-primary ml-auto bg-primary" data-region="section-unread-count">
+                                    
+                                </span>
+                            </button>
+                        </div>
+                                            <div
+                        class=" accordion-body collapse border-bottom "
+                        style="overflow-y: auto"
+                        aria-live="polite"
+                        data-region="lazy-load-list"
+                        data-user-id="47172"
+                                    id="view-overview-group-messages-target"
+            aria-labelledby="view-overview-group-messages-toggle"
+            data-parent="#message-drawer-view-overview-container"
+
+                    >
+                        <div class="onepix">
+                        </div>
+                        
+                        <div class="hidden text-center p-2" data-region="empty-message-container">
+                                    <p class="text-muted mt-2">No group conversations</p>
+
+                        </div>
+                        <div class="hidden list-group" data-region="content-container">
+                            
+                        </div>
+                        <div class="list-group" data-region="placeholder-container">
+                                    <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+
+                        </div>
+                        <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div
+                        class="accordion-group section border-0 "
+                        data-region="view-overview-messages"
+                    >
+                        <div id="view-overview-messages-toggle" class="accordion-heading" data-region="toggle">
+                            <button
+                                class="btn btn-link w-100 text-left p-2 m-0 d-flex align-items-center overview-section-toggle collapsed"
+                                data-toggle="collapse"
+                                data-parent="#message-drawer-view-overview-container"
+                                data-target="#view-overview-messages-target"
+                                aria-expanded="false"
+                                aria-controls="view-overview-messages-target"
+                            >
+                                <span class="collapsed-icon-container">
+                                    <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <span class="expanded-icon-container">
+                                    <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <strong>Private</strong>
+                                <span class="hidden ml-1" data-region="section-total-count-container">
+                                    (<span data-region="section-total-count"></span>)
+                                </span>
+                                <span class="hidden ml-2" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                </span>
+                                <span class="hidden badge badge-pill badge-primary ml-auto bg-primary" data-region="section-unread-count">
+                                    
+                                </span>
+                            </button>
+                        </div>
+                                            <div
+                        class=" accordion-body collapse border-bottom "
+                        style="overflow-y: auto"
+                        aria-live="polite"
+                        data-region="lazy-load-list"
+                        data-user-id="47172"
+                                    id="view-overview-messages-target"
+            aria-labelledby="view-overview-messages-toggle"
+            data-parent="#message-drawer-view-overview-container"
+
+                    >
+                        <div class="onepix">
+                        </div>
+                        
+                        <div class="hidden text-center p-2" data-region="empty-message-container">
+                                    <p class="text-muted mt-2">No private conversations</p>
+
+                        </div>
+                        <div class="hidden list-group" data-region="content-container">
+                            
+                        </div>
+                        <div class="list-group" data-region="placeholder-container">
+                                    <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+
+                        </div>
+                        <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        
+        <div
+            data-region="view-search"
+            aria-hidden="true"
+            class="h-100 hidden"
+            data-user-id="47172"
+            data-users-offset="0"
+            data-messages-offset="0"
+            style="overflow-y: auto"
+        >
+            <div class="hidden" data-region="search-results-container" style="overflow-y: auto">
+                
+                <div class="d-flex flex-column">
+                    <div class="mb-3 bg-white" data-region="all-contacts-container">
+                        <div data-region="contacts-container"  class="pt-2">
+                            <h4 class="h6 px-2">Contacts</h4>
+                            <div class="list-group" data-region="list"></div>
+                        </div>
+                        <div data-region="non-contacts-container" class="pt-2 border-top">
+                            <h4 class="h6 px-2">Non-contacts</h4>
+                            <div class="list-group" data-region="list"></div>
+                        </div>
+                        <div class="text-right">
+                            <button class="btn btn-link text-primary" data-action="load-more-users">
+                                <span data-region="button-text">Load more</span>
+                                <span data-region="loading-icon-container" class="hidden"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white" data-region="messages-container">
+                        <h4 class="h6 px-2 pt-2">Messages</h4>
+                        <div class="list-group" data-region="list"></div>
+                        <div class="text-right">
+                            <button class="btn btn-link text-primary" data-action="load-more-messages">
+                                <span data-region="button-text">Load more</span>
+                                <span data-region="loading-icon-container" class="hidden"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="hidden p-3 text-center" data-region="no-results-container">No results</p>
+                </div>            </div>
+            <div class="hidden" data-region="loading-placeholder">
+                <div class="text-center pt-3 icon-size-4"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+            </div>
+            <div class="p-3 text-center" data-region="empty-message-container">
+                <p>Search people and messages</p>
+            </div>
+        </div>        
+        <div class="h-100 hidden bg-white" aria-hidden="true" data-region="view-settings">
+            <div class="hidden" data-region="content-container">
+                
+                <div data-region="settings" class="p-3">
+                    <h3 class="h6 font-weight-bold">Privacy</h3>
+                    <p>You can restrict who can message you</p>
+                    <div data-preference="blocknoncontacts" class="mb-3">
+                            <div class="custom-control custom-radio mb-2">
+                                <input
+                                    type="radio"
+                                    name="message_blocknoncontacts"
+                                    class="custom-control-input"
+                                    id="block-noncontacts-5e92986323a195e9298630eb8316-1"
+                                    value="1"
+                                >
+                                <label class="custom-control-label ml-2" for="block-noncontacts-5e92986323a195e9298630eb8316-1">
+                                    My contacts only
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio mb-2">
+                                <input
+                                    type="radio"
+                                    name="message_blocknoncontacts"
+                                    class="custom-control-input"
+                                    id="block-noncontacts-5e92986323a195e9298630eb8316-0"
+                                    value="0"
+                                >
+                                <label class="custom-control-label ml-2" for="block-noncontacts-5e92986323a195e9298630eb8316-0">
+                                    My contacts and anyone in my courses
+                                </label>
+                            </div>
+                    </div>
+                
+                    <div class="hidden" data-region="notification-preference-container">
+                        <h3 class="mb-2 mt-4 h6 font-weight-bold">Notification preferences</h3>
+                    </div>
+                
+                    <h3 class="mb-2 mt-4 h6 font-weight-bold">General</h3>
+                    <div data-preference="entertosend">
+                        <span class="switch">
+                            <input type="checkbox"
+                                id="enter-to-send-5e92986323a195e9298630eb8316"
+                                
+                            >
+                            <label for="enter-to-send-5e92986323a195e9298630eb8316">
+                                Use enter to send
+                            </label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div data-region="placeholder-container">
+                
+                <div class="d-flex flex-column p-3">
+                    <div class="w-25 bg-pulse-grey h6" style="height: 18px"></div>
+                    <div class="w-75 bg-pulse-grey mb-4" style="height: 18px"></div>
+                    <div class="mb-3">
+                        <div class="w-100 d-flex mb-3">
+                            <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                            <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                        </div>
+                        <div class="w-100 d-flex mb-3">
+                            <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                            <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                        </div>
+                        <div class="w-100 d-flex mb-3">
+                            <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                            <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                        </div>
+                    </div>
+                    <div class="w-50 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px"></div>
+                    <div class="mb-4">
+                        <div class="w-100 d-flex mb-2 align-items-center">
+                            <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                            <div class="bg-pulse-grey w-25 ml-2" style="height: 18px"></div>
+                        </div>
+                        <div class="w-100 d-flex mb-2 align-items-center">
+                            <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                            <div class="bg-pulse-grey w-25 ml-2" style="height: 18px"></div>
+                        </div>
+                    </div>
+                    <div class="w-25 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px"></div>
+                    <div class="mb-3">
+                        <div class="w-100 d-flex mb-2 align-items-center">
+                            <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                            <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                        </div>
+                    </div>
+                </div>            </div>
+        </div>    </div>
+    <div class="footer-container position-relative modal-footer" data-region="footer-container">
+        
+        <div
+            class="hidden border-top bg-white position-relative"
+            aria-hidden="true"
+            data-region="view-conversation"
+            data-enter-to-send="0"
+        >
+            <div class="hidden p-2" data-region="content-messages-footer-container">
+                
+                <div class="d-flex mt-1">
+                    <textarea
+                        dir="auto"
+                        data-region="send-message-txt"
+                        class="form-control bg-light m-0 flex-grow"
+                        rows="3"
+                        data-auto-rows
+                        data-min-rows="3"
+                        data-max-rows="5"
+                        role="textbox"
+                        aria-label="Write a message..."
+                        placeholder="Write a message..."
+                        style="resize: none"
+                    ></textarea>
+                    <button
+                        class="btn btn-link btn-icon icon-size-3 ml-1 mt-auto"
+                        aria-label="Send message"
+                        data-action="send-message"
+                    >
+                        <span data-region="send-icon-container"><i class="icon fa fa-paper-plane fa-fw " aria-hidden="true"  ></i></span>
+                        <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden p-2" data-region="content-messages-footer-edit-mode-container">
+                
+                <div class="d-flex p-3">
+                    <button
+                        class="btn btn-link btn-icon my-1 icon-size-4 ml-auto"
+                        data-action="delete-selected-messages"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Delete selected messages"
+                    >
+                        <span data-region="icon-container"><i class="icon fa fa-trash fa-fw " aria-hidden="true"  ></i></span>
+                        <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        <span class="sr-only">Delete selected messages</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden bg-secondary p-3" data-region="content-messages-footer-require-contact-container">
+                
+                <div class="p-3 bg-white">
+                    <p data-region="title"></p>
+                    <p class="text-muted" data-region="text"></p>
+                    <button type="button" class="btn btn-primary btn-block" data-action="request-add-contact">
+                        <span data-region="dialogue-button-text">Send contact request</span>
+                        <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden bg-secondary p-3" data-region="content-messages-footer-require-unblock-container">
+                
+                <div class="p-3 bg-white">
+                    <p class="text-muted" data-region="text">You have blocked this user.</p>
+                    <button type="button" class="btn btn-primary btn-block" data-action="request-unblock">
+                        <span data-region="dialogue-button-text">Unblock user</span>
+                        <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden bg-secondary p-3" data-region="content-messages-footer-unable-to-message">
+                
+                <div class="p-3 bg-white">
+                    <p class="text-muted" data-region="text">You are unable to message this user</p>
+                </div>
+            </div>
+            <div class="p-2" data-region="placeholder-container">
+                <div class="d-flex">
+                    <div class="bg-pulse-grey w-100" style="height: 80px"></div>
+                    <div class="mx-2 mb-2 align-self-end bg-pulse-grey" style="height: 20px; width: 20px"></div>
+                </div>            </div>
+            <div
+                class="hidden position-absolute"
+                data-region="confirm-dialogue-container"
+                style="top: -1px; bottom: 0; right: 0; left: 0; background: rgba(0,0,0,0.3);"
+            ></div>
+        </div>    </div>
+</div>
+<div id="message-drawer-backdrop" class="modal-backdrop fade in hidden"></div></div>
+
+    <footer role="contentinfo" id="page-footer">
+        <div class="container-fluid">
+                        <div class="row-fluid footerblocks">
+                <div class="footerblock span4">
+                    <aside id="block-region-footer-left" class="block-region" data-blockregion="footer-left" data-droptarget="1"></aside>                </div>
+                <div class="footerblock span4">
+                    <aside id="block-region-footer-middle" class="block-region" data-blockregion="footer-middle" data-droptarget="1"></aside>                </div>
+                <div class="footerblock span4">
+                    <aside id="block-region-footer-right" class="block-region" data-blockregion="footer-right" data-droptarget="1"></aside>                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="tool_usertours-resettourcontainer span12"></div>
+            </div>
+            <div class="footerlinks row-fluid">
+                <hr/>
+                <span class="helplink"></span>
+                                    <span class="copy">&copy;2020 UNIVERSITAS JEMBER</span>
+                                <div class="footnote span12"><p style="text-align: center;"><span style="font-size: xx-small;">Media Manajemen Pembelajaran (MMP) dikembangkan oleh UPT. Teknologi Informasi dan Komunikasi - Universitas Jember 2016 - 2020 menggunakan Moodle.</span></p></div>            </div>
+            <div class="footerperformance row-fluid">
+                            </div>
+        </div>
+    </footer>
+    <a href="#top" class="back-to-top" aria-label="Back to top">
+        <span aria-hidden="true" class="fa fa-angle-up "></span></a>
+<script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://mmp.unej.ac.id/lib/requirejs.php/1586652111/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://mmp.unej.ac.id/lib/javascript.php/1586652111/lib/jquery/jquery-3.2.1.min',
+        jqueryui: 'https://mmp.unej.ac.id/lib/javascript.php/1586652111/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://mmp.unej.ac.id/lib/javascript.php/1586652111/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="https://mmp.unej.ac.id/lib/javascript.php/1586652111/lib/requirejs/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.util.js_pending("core/first");require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://mmp.unej.ac.id/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("en",{
+ "Audio Player": "Audio Player",
+ "Video Player": "Video Player",
+ "Play": "Play",
+ "Pause": "Pause",
+ "Replay": "Replay",
+ "Current Time": "Current Time",
+ "Duration Time": "Duration Time",
+ "Remaining Time": "Remaining Time",
+ "Stream Type": "Stream Type",
+ "LIVE": "LIVE",
+ "Loaded": "Loaded",
+ "Progress": "Progress",
+ "Progress Bar": "Progress Bar",
+ "progress bar timing: currentTime={1} duration={2}": "{1} of {2}",
+ "Fullscreen": "Fullscreen",
+ "Non-Fullscreen": "Non-Fullscreen",
+ "Mute": "Mute",
+ "Unmute": "Unmute",
+ "Playback Rate": "Playback Rate",
+ "Subtitles": "Subtitles",
+ "subtitles off": "subtitles off",
+ "Captions": "Captions",
+ "captions off": "captions off",
+ "Chapters": "Chapters",
+ "Descriptions": "Descriptions",
+ "descriptions off": "descriptions off",
+ "Audio Track": "Audio Track",
+ "Volume Level": "Volume Level",
+ "You aborted the media playback": "You aborted the media playback",
+ "A network error caused the media download to fail part-way.": "A network error caused the media download to fail part-way.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "The media could not be loaded, either because the server or network failed or because the format is not supported.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.",
+ "No compatible source was found for this media.": "No compatible source was found for this media.",
+ "The media is encrypted and we do not have the keys to decrypt it.": "The media is encrypted and we do not have the keys to decrypt it.",
+ "Play Video": "Play Video",
+ "Close": "Close",
+ "Close Modal Dialog": "Close Modal Dialog",
+ "Modal Window": "Modal Window",
+ "This is a modal window": "This is a modal window",
+ "This modal can be closed by pressing the Escape key or activating the close button.": "This modal can be closed by pressing the Escape key or activating the close button.",
+ ", opens captions settings dialog": ", opens captions settings dialog",
+ ", opens subtitles settings dialog": ", opens subtitles settings dialog",
+ ", opens descriptions settings dialog": ", opens descriptions settings dialog",
+ ", selected": ", selected",
+ "captions settings": "captions settings",
+ "subtitles settings": "subititles settings",
+ "descriptions settings": "descriptions settings",
+ "Text": "Text",
+ "White": "White",
+ "Black": "Black",
+ "Red": "Red",
+ "Green": "Green",
+ "Blue": "Blue",
+ "Yellow": "Yellow",
+ "Magenta": "Magenta",
+ "Cyan": "Cyan",
+ "Background": "Background",
+ "Window": "Window",
+ "Transparent": "Transparent",
+ "Semi-Transparent": "Semi-Transparent",
+ "Opaque": "Opaque",
+ "Font Size": "Font Size",
+ "Text Edge Style": "Text Edge Style",
+ "None": "None",
+ "Raised": "Raised",
+ "Depressed": "Depressed",
+ "Uniform": "Uniform",
+ "Dropshadow": "Dropshadow",
+ "Font Family": "Font Family",
+ "Proportional Sans-Serif": "Proportional Sans-Serif",
+ "Monospace Sans-Serif": "Monospace Sans-Serif",
+ "Proportional Serif": "Proportional Serif",
+ "Monospace Serif": "Monospace Serif",
+ "Casual": "Casual",
+ "Script": "Script",
+ "Small Caps": "Small Caps",
+ "Reset": "Reset",
+ "restore all settings to the default values": "restore all settings to the default values",
+ "Done": "Done",
+ "Caption Settings Dialog": "Caption Settings Dialog",
+ "Beginning of dialog window. Escape will cancel and close the window.": "Beginning of dialog window. Escape will cancel and close the window.",
+ "End of dialog window.": "End of dialog window."
+});
+
+    });
+});;
+M.util.js_pending('theme_essential/header');
+require(['theme_essential/header'], function(amd) {
+    amd.init();
+    M.util.js_complete('theme_essential/header');
+});;
+M.util.js_pending('theme_essential/footer');
+require(['theme_essential/footer'], function(amd) {
+    amd.init();
+    M.util.js_complete('theme_essential/footer');
+});;
+M.util.js_pending('theme_essential/navbar');
+require(['theme_essential/navbar'], function(amd) {
+    amd.init({"oldnavbar":"1"});
+    M.util.js_complete('theme_essential/navbar');
+});;
+M.util.js_pending('theme_essential/affix');
+require(['theme_essential/affix'], function(amd) {
+    amd.init();
+    M.util.js_complete('theme_essential/affix');
+});;
+M.util.js_pending('theme_essential/jBreadCrumb');
+require(['theme_essential/jBreadCrumb'], function(amd) {
+    amd.init();
+    M.util.js_complete('theme_essential/jBreadCrumb');
+});;
+M.util.js_pending('theme_essential/fitvids');
+require(['theme_essential/fitvids'], function(amd) {
+    amd.init();
+    M.util.js_complete('theme_essential/fitvids');
+});;
+
+require(
+[
+    'jquery',
+    'block_myoverview/main',
+],
+function(
+    $,
+    Main
+) {
+    var root = $('#block-myoverview-5e9298630eb7d5e9298630eb831');
+    Main.init(root);
+});
+;
+
+require(
+[
+    'jquery',
+    'block_recentlyaccessedcourses/main'
+],
+function(
+    $,
+    Main
+) {
+    var root = $('#block-recentlyaccessedcourses-5e929863104cb5e9298630eb832');
+    var userid = root.attr('data-userid');
+
+    Main.init(userid, root);
+});
+;
+M.util.js_pending('block_navigation/navblock');
+require(['block_navigation/navblock'], function(amd) {
+    amd.init("4");
+    M.util.js_complete('block_navigation/navblock');
+});;
+M.util.js_pending('tool_usertours/usertours');
+require(['tool_usertours/usertours'], function(amd) {
+    amd.init("4", false, 472505);
+    M.util.js_complete('tool_usertours/usertours');
+});;
+M.util.js_pending('block_settings/settingsblock');
+require(['block_settings/settingsblock'], function(amd) {
+    amd.init("5", null);
+    M.util.js_complete('block_settings/settingsblock');
+});;
+M.util.js_pending('block_online_users/change_user_visibility');
+require(['block_online_users/change_user_visibility'], function(amd) {
+    amd.init();
+    M.util.js_complete('block_online_users/change_user_visibility');
+});;
+
+require(['core/yui'], function(Y) {
+    M.util.init_skiplink(Y);
+});
+;
+
+require(
+[
+    'jquery',
+    'core_message/message_popover'
+],
+function(
+    $,
+    Popover
+) {
+    var toggle = $('#message-drawer-toggle-5e929863207335e9298630eb8312');
+    Popover.init(toggle);
+
+    $(document).ready(function() {
+        var backdrop = $('#message-drawer-backdrop');
+        var navbar = $('#essentialnavbar');
+        var root = $('.essential-message-drawer');
+        var checkState = function() {
+            if (root.hasClass('hidden')) {
+                backdrop.addClass('hidden');
+                navbar.removeClass('modal-layer');
+            } else {
+                backdrop.removeClass('hidden');
+                navbar.addClass('modal-layer');
+            }
+        };
+
+        toggle.click(function() {
+            checkState();
+        });
+    });
+});
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(
+[
+    'jquery',
+    'core_message/message_drawer',
+    'core_message/message_popover'
+],
+function(
+    $,
+    MessageDrawer,
+    Popover
+) {
+
+    var root = $('#message-drawer-5e92986323a195e9298630eb8316');
+    MessageDrawer.init(root);
+
+    var toggle = $('#message-drawer-close-5e92986323a195e9298630eb8316');
+    Popover.init(toggle);
+
+    $(document).ready(function() {
+        var backdrop = $('#message-drawer-backdrop');
+        var navbar = $('#essentialnavbar');
+        var checkState = function() {
+            if (root.hasClass('hidden')) {
+                backdrop.addClass('hidden');
+                navbar.removeClass('modal-layer');
+            } else {
+                backdrop.removeClass('hidden');
+                navbar.addClass('modal-layer');
+            }
+        };
+
+        toggle.click(function() {
+            checkState();
+        });
+    });
+
+});
+;
+M.util.js_pending('core/log');
+require(['core/log'], function(amd) {
+    amd.setConfig({"level":"warn"});
+    M.util.js_complete('core/log');
+});;
+M.util.js_pending('core/page_global');
+require(['core/page_global'], function(amd) {
+    amd.init();
+    M.util.js_complete('core/page_global');
+});M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script type="text/javascript" src="https://mmp.unej.ac.id/theme/javascript.php/essential/1586652111/footer"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","viewallcourses":"View all courses","cancel":"Cancel","morehelp":"More help","loadinghelp":"Loading...","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"en"});
+});
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+M.util.init_block_hider(Y, {"id":"inst299676","title":"Latest badges","preference":"block299676hidden","tooltipVisible":"Hide Latest badges block","tooltipHidden":"Show Latest badges block"});
+M.util.init_block_hider(Y, {"id":"inst299674","title":"Online users","preference":"block299674hidden","tooltipVisible":"Hide Online users block","tooltipHidden":"Show Online users block"});
+M.util.init_block_hider(Y, {"id":"inst299675","title":"Course overview","preference":"block299675hidden","tooltipVisible":"Hide Course overview block","tooltipHidden":"Show Course overview block"});
+M.util.init_block_hider(Y, {"id":"inst503226","title":"Recently accessed courses","preference":"block503226hidden","tooltipVisible":"Hide Recently accessed courses block","tooltipHidden":"Show Recently accessed courses block"});
+ M.util.js_pending('random5e9298630eb8319'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5e9298630eb8319'); });
+})();
+//]]>
+</script>
+<script>
+    $( document ).ready(function() {
+     $('.modal-wrapper').toggleClass('open');
+     $('.page-wrapper').toggleClass('blur');
+  $('.trigger').click(function() {
+  $('.modal-wrapper').toggleClass('open');
+     $('.page-wrapper').toggleClass('blur');
+  return false;
+  });
+});
+
+  $( "#claim").click(function() {
+    console.log('anjay')
+  $( ".flash" ).addClass( "animate--drop-in-fade-out" );
+  setTimeout(function(){
+    $( ".flash" ).removeClass( "animate--drop-in-fade-out" );
+  }, 4000);
+});
+</script>
+</body>
+</html>
+<!-- Essential theme version: 2018121704 is developed by Gareth J Barnard: about.me/gjbarnard -->
