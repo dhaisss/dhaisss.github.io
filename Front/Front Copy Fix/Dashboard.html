@@ -52,7 +52,7 @@ M.yui.loader = {modules: {}};
       background:rgba(217,67,86,1);
     }
     
-    .modal-wrapper{
+    .modal-wrapper , .modal-wrapper-claim{
       width:100%;
       height:100%;
       position:fixed;
@@ -68,6 +68,10 @@ M.yui.loader = {modules: {}};
     }
     
     .modal-wrapper.open{
+      opacity:1;
+      visibility:visible;
+    }
+    .modal-wrapper-claim.open{
       opacity:1;
       visibility:visible;
     }
@@ -91,10 +95,14 @@ M.yui.loader = {modules: {}};
       margin-top:-200px;
       opacity:1;
     }
+    .modal-wrapper-claim.open .modal{
+      margin-top:-200px;
+      opacity:1;
+    }
     
     .head{
       width:100%;
-      height:65px;
+      height:70px;
       padding:1.5em 5%;
       overflow:hidden;
       background:#01bce5;
@@ -394,7 +402,96 @@ M.yui.loader = {modules: {}};
       -ms-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
       -o-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
       animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
-    }    
+    } 
+
+    *, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+ 
+}
+
+
+/* Form Progress */
+.progress {
+    height: 120px;
+  width: 500px;
+  margin: -20px auto;
+  text-align: center;
+  background: #01bce5;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.progress .circle,
+.progress .bar {
+  display: inline-block;
+  background: #008EAD;
+  width: 40px; height: 40px;
+  border-radius: 50px;
+  border: 1px solid #FFF;
+}
+.progress .bar {
+  position: relative;
+  width: 80px;
+  height: 6px;
+  top: 17px;
+  margin-left: -5px;
+  margin-right: -5px;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+.progress .circle .label {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 32px;
+  margin-top: 3px;
+  color: #FFF;
+  font-size: 17px;
+}
+.progress .circle .title {
+  color: #FFF;
+  font-size: 13px;
+  line-height: 30px;
+  margin-left: -5px;
+}
+
+/* Done / 26637A Active */
+.progress .bar.done,
+.progress .circle.done {
+  background: #FFF;
+}
+.progress .bar.active {
+  background: linear-gradient(to right, #EEE 40%, #FFF 60%);
+}
+.progress .circle.done .label {
+  color: #FFF;
+  background: #01bce5;
+  box-shadow: inset 0 0 2px #008EAD;
+}
+.progress .circle.done .title {
+  color: #FFF;
+}
+
+.progress .circle.active .label {
+  color: #01bce5;
+  background: #FFF;
+  box-shadow: inset 0 0 2px #FFF;
+}
+.progress .circle.active .title {
+  color: #FFF;
+}
     </style>
 
 <meta name="google-site-verification" content="usv8T3wASx7BZUyfAFldL-rWEAz95d54G3wRZd_uV5I" />    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -405,6 +502,7 @@ M.yui.loader = {modules: {}};
 <link rel="apple-touch-icon" sizes="72x72" href="https://mmp.unej.ac.id/theme/image.php/essential/theme/1586573671/homeicon/ipad"/>
 <link rel="apple-touch-icon" sizes="114x114" href="https://mmp.unej.ac.id/theme/image.php/essential/theme/1586573671/homeicon/iphone_retina"/>
 <link rel="apple-touch-icon" sizes="144x144" href="https://mmp.unej.ac.id/theme/image.php/essential/theme/1586573671/homeicon/ipad_retina"/>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 </head>
     
@@ -583,10 +681,128 @@ document.body.className += ' jsenabled';
       </table>
     </div>
     <div class="head">
-       
+        <div class="progress">
+            <div class="circle done">
+              <span class="label" style="font-size: small;">20</span>
+              <a id="claim-matkul" href="javascript:;"><span class="title">Claim</span></a>
+            </div>
+            <span class="bar done"></span>
+            <div class="circle done">
+              <span style="font-size: small;" class="label">40</span>
+              <span class="title">Address</span>
+            </div>
+            <span class="bar half"></span>
+            <div class="circle active">
+              <span style="font-size: small;" class="label">60</span>
+              <span class="title">Payment</span>
+            </div>
+            <span class="bar"></span>
+            <div class="circle">
+              <span style="font-size: small;" class="label">80</span>
+              <span class="title">Review</span>
+            </div>
+            <span class="bar"></span>
+            <div class="circle">
+              <span style="font-size: small;" class="label">100</span>
+              <span class="title">Finish</span>
+            </div>
+          </div>
       </div>
   </div>
 </div>
+
+<div class="modal-wrapper-claim">
+    <div class="modal">
+      <div class="head">
+          <div style="text-align: center;"><img src="maskot.svg" width="50" style="margin-top: -22px; left: 50%; right: 50%;" alt="">
+              <span style="font-style: FontAwesome,sans-serif;">Ayam Task</span></div>
+          
+        <a class="btn-close trigger" href="javascript:;"></a>
+      </div>
+      <div class="content">
+        <table>
+          <thead>
+            <td width="75%">Tugas</td>
+            <td width="15%">Action</td>
+            <td width="10%">Poin</td>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+              <ul><li>Kumpulkan tugas Bahasa Haji</li></ul>
+              </td>
+              <td><a href="javascript:;" id="claim" class="button">Claim</a></td>
+              <td><span class="point">20</span></td>
+            </tr>
+          </tbody>
+                 <tr>
+                  <td>
+                  <ul><li>Resume pertemuan ke 8 Mata Kuliah Kewarganegaraan</li></ul>
+                  </td>
+                  <td><a href="javascript:;" class="button">Go To</a></td>
+                  <td><span class="point">20</span></td>
+                </tr>
+                 <tr>
+                  <td>
+                  <ul><li>Dapatkan posisi 10 besar pada quiz 3 Mata Kuliah Kewarganegaraan</li></ul>
+                  </td>
+                  <td><a href="javascript:;" class="button">Go To</a></td>
+                  <td><span class="point">25</span></td>
+                </tr>
+                 <tr>
+                  <td>
+                  <ul><li>Dapatkan posisi 10 besar pada quiz 2 Mata Kuliah Bahasa Indonesia</li></ul>
+                  </td>
+                  <td><a href="javascript:;" class="button">Go To</a></td>
+                  <td><span class="point">30</span></td>
+                </tr>
+                 <tr>
+                  <td>
+                  <ul><li>Resume pertemuan ke 8 Mata Kuliah Metode Penelitian</li></ul>
+                  </td>
+                  <td><a href="javascript:;" class="button">Go To</a></td>
+                  <td><span class="point">20</span></td>
+                </tr>
+                 <tr>
+                  <td>
+                  <ul><li>Resume pertemuan ke 8 Mata Kuliah Metode Penelitian</li></ul>
+                  </td>
+                  <td><a href="javascript:;" class="button">Go To</a></td>
+                  <td><span class="point">20</span></td>
+                </tr>
+    
+        </table>
+      </div>
+      <div class="head">
+          <div class="progress">
+              <div class="circle done">
+                <span class="label" style="font-size: small;">20</span>
+                <a ><span class="title done">Claim</span></a>
+              </div>
+              <span class="bar done"></span>
+              <div class="circle done">
+                <span style="font-size: small;" class="label">40</span>
+                <span class="title">Address</span>
+              </div>
+              <span class="bar half"></span>
+              <div class="circle active">
+                <span style="font-size: small;" class="label">60</span>
+                <span class="title">Payment</span>
+              </div>
+              <span class="bar"></span>
+              <div class="circle">
+                <span style="font-size: small;" class="label">80</span>
+                <span class="title">Review</span>
+              </div>
+              <span class="bar"></span>
+              <div class="circle">
+                <span style="font-size: small;" class="label">100</span>
+                <span class="title">Finish</span>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
 
     
 <div id="page" class="container-fluid">
@@ -2901,6 +3117,14 @@ M.util.init_block_hider(Y, {"id":"inst506017","title":"Recently accessed courses
   });
 });
 
+$('#claim-matkul').click(function() {
+    console.log('anjay')
+    $('.modal-wrapper').removeClass('open');
+  $('.modal-wrapper-claim').toggleClass('open');
+     $('.page-wrapper').toggleClass('blur');
+  return false;
+  });
+
   $( "#claim").click(function() {
     console.log('anjay')
   $( ".flash" ).addClass( "animate--drop-in-fade-out" );
@@ -2908,6 +3132,30 @@ M.util.init_block_hider(Y, {"id":"inst506017","title":"Recently accessed courses
     $( ".flash" ).removeClass( "animate--drop-in-fade-out" );
   }, 4000);
 });
+</script>
+<script>
+    var i = 1;
+$('.progress .circle').removeClass().addClass('circle');
+$('.progress .bar').removeClass().addClass('bar');
+setInterval(function() {
+  $('.progress .circle:nth-of-type(' + i + ')').addClass('active');
+  
+  $('.progress .circle:nth-of-type(' + (i-1) + ')').removeClass('active').addClass('done');
+  
+  $('.progress .circle:nth-of-type(' + (i-1) + ') .label').html('&#10003;');
+  
+  $('.progress .bar:nth-of-type(' + (i-1) + ')').addClass('active');
+  
+  $('.progress .bar:nth-of-type(' + (i-2) + ')').removeClass('active').addClass('done');
+  
+  i++;
+  
+  if (i==0) {
+    $('.progress .bar').removeClass().addClass('bar');
+    $('.progress div.circle').removeClass().addClass('circle');
+    i = 1;
+  }
+}, 1000);
 </script>
 
 <!-- Essential theme version: 2018121704 is developed by Gareth J Barnard: about.me/gjbarnard --><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>
