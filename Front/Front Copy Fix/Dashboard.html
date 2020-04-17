@@ -716,7 +716,7 @@ document.body.className += ' jsenabled';
           <div style="text-align: center;"><img src="maskot.svg" width="50" style="margin-top: -22px; left: 50%; right: 50%;" alt="">
               <span style="font-style: FontAwesome,sans-serif; color:#EEE; font-weight: bold;">CLAIM REWARDS</span></div>
           
-        <a class="btn-close trigger" href="javascript:;"></a>
+        <a class="btn-close trigger-claim" href="javascript:;"></a>
       </div>
       <div class="content">
         <table>
@@ -3070,6 +3070,12 @@ M.util.init_block_hider(Y, {"id":"inst506017","title":"Recently accessed courses
   return false;
   });
 });
+
+$('.trigger-claim').click(function() {
+  $('.modal-wrapper-claim').toggleClass('open');
+     $('.page-wrapper').toggleClass('blur');
+  return false;
+  });
 
 $('#claim-matkul').click(function() {
     console.log('anjay')
